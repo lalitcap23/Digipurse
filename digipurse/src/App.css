@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+/* App.css */
+.head-title {
+  font-size: 2.5rem; /* Adjust the font size */
+  color: #acb19cca;    /* Change the text color */
+  text-align: center; /* Center the text */
+  margin: 20px 0;    /* Add margin above and below */
+  font-family: 'Arial', sans-serif; /* Change the font */
+}

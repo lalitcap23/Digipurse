@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from 'react';
+import './App.css'; 
+
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
@@ -33,13 +35,14 @@ function App() {
             <WalletProvider wallets={wallets} autoConnect> 
                 <WalletModalProvider>
                     <div>
-                        <h1>Hi there, this is a web wallet.</h1>
+
+                        <h1 className='head-title'>you are back for those faucet 💦💦.</h1>
                         <WalletMultiButton />
                         <WalletDisconnectButton  />
                     </div>
                     {/* Airdrop Component */}
                     <Airdrop />
-                    <Button/>
+                  <center><Button/></center>  
                      
                 </WalletModalProvider>
             </WalletProvider>
