@@ -8,9 +8,11 @@ import {
     WalletMultiButton
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
+import SolanaBal from './solanaBal';
 
 import '@solana/wallet-adapter-react-ui/styles.css';
 import Airdrop from './Airdrop';  
+import Button from './button';
 
 function App() {
     const [mnemonic, setMnemonic] = useState(""); 
@@ -37,8 +39,11 @@ function App() {
                     </div>
                     {/* Airdrop Component */}
                     <Airdrop />
+                    <Button/>
+                     
                 </WalletModalProvider>
             </WalletProvider>
+            
         </ConnectionProvider>
     );
 }
