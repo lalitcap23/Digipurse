@@ -41,9 +41,10 @@ function App() {
                     </div>
                     {/* Airdrop Component */}
                     <Airdrop />
-                  <center><Button/></center>  
+                    <br/>
+                  <Button/>
                      
-                </WalletModalProvider>
+               </WalletModalProvider>
             </WalletProvider>
             
         </ConnectionProvider>

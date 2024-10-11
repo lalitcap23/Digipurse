@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { generateMnemonic } from 'bip39';
+import {  ShimmerButton
+} from "./components/ui/shimmer-button"
 
 const MnemonicInput = () => {
     const [mnemonic, setMnemonic] = useState("");
@@ -33,9 +35,7 @@ const MnemonicInput = () => {
                 </label>
                 <button type="submit">Submit</button>
             </form>
-            <button onClick={handleGenerateMnemonic}>
-                Create Seed Phrase
-            </button>
+           <ShimmerButton onClick={handleGenerateMnemonic}>create seed phrase</ShimmerButton>
             <p>Generated Mnemonic: {mnemonic}</p>
             {/* <input type="text" value={mnemonic}></input> */}
         </div>
