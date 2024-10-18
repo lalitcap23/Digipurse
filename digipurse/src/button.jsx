@@ -12,7 +12,6 @@ const MnemonicInput = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Submitted Mnemonic:", mnemonic);
-        // Add your logic to use the mnemonic here
     };
 
     const handleGenerateMnemonic = async () => {

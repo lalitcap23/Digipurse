@@ -11,40 +11,19 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-/* App.css */
 .head-title {
   font-size: 2.5rem; /* Adjust the font size */
-  color: #acb19cca;    /* Change the text color */
+  color: #0b0b01ca;    /* Change the text color */
   text-align: center; /* Center the text */
   margin: 20px 0;    /* Add margin above and below */
   font-family: 'Arial', sans-serif; /* Change the font */
 }
+/* Apply a gradient background similar to Solflare */
+body {
+  background: linear-gradient(135deg, #0f0f1d, #0a0b34 60%, #0e113a 100%);
+  background-image: url('https://img.freepik.com/free-vector/gradient-connection-background_23-2150511957.jpg');
+  background-size: cover;
+  color: white;
+}
+

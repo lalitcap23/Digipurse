@@ -10,6 +10,10 @@ import {
     WalletMultiButton
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
+import Tran from './tran';
+import Navbar from './navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import SolanaBal from './solanaBal';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import Airdrop from './airdrop';  
@@ -33,7 +37,9 @@ function App() {
         <ConnectionProvider endpoint={endpoint}> 
             <WalletProvider wallets={wallets} autoConnect> 
                 <WalletModalProvider>
+                  <Navbar/>
                     <div>
+                        
 
                         <h1 className='head-title'>you are back for those faucet 💦💦.</h1>
                         <WalletMultiButton />
@@ -43,7 +49,8 @@ function App() {
                     <Airdrop />
                     <br/>
                   <Button/>
-                     
+                  <Tran/>
+
                </WalletModalProvider>
             </WalletProvider>
             
