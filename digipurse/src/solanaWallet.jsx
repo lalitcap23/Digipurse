@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { mnemonicToSeedSync } from "bip39"; // Use mnemonicToSeedSync instead of async version
+import { mnemonicToSeedSync } from "bip39"; 
 import { derivePath } from "ed25519-hd-key";
 import { Keypair } from "@solana/web3.js";
 import nacl from "tweetnacl";
@@ -8,15 +8,13 @@ export default function Solana({ mnemonic }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [publicKeys, setPublicKeys] = useState([]);
 
-    // Function to add a new wallet based on the mnemonic and current index
     const addWallet = () => {
         try {
-            // Step 1: Convert the mnemonic phrase into a seed
-            const seed = mnemonicToSeedSync(mnemonic); // Convert mnemonic to seed
+            const seed = mnemonicToSeedSync(mnemonic); 
             console.log("Seed: ", seed.toString("hex"));
 
-            // Step 2: Define a derivation path for Solana (BIP44 standard for Solana is m/44'/501'/0'/0')
-            const path = `m/44'/501'/${currentIndex}'/0'`; // Using currentIndex to generate multiple wallets
+           
+            const path = `m/44'/501'/${currentIndex}'/0'`; 
 
             // Step 3: Derive the key from the seed using the derivation path
             const derivedSeed = derivePath(path, seed.toString("hex")).key;

@@ -1,8 +1,8 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 5rem;
+  text-align: right;
 }
 
 .logo {
@@ -13,17 +13,257 @@
 }
 
 .head-title {
-  font-size: 2.5rem; /* Adjust the font size */
-  color: #0b0b01ca;    /* Change the text color */
-  text-align: center; /* Center the text */
-  margin: 20px 0;    /* Add margin above and below */
-  font-family: 'Arial', sans-serif; /* Change the font */
+  /* Base styles from your example */
+  font-size: 2.8rem;
+  color: #0b0b01ca;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+  
+  /* Animation setup */
+  position: relative;
+  display: block;
+  padding: 5px;
+  animation: dropFromTop 1.5s ease-out forwards;
+  opacity: 0;
 }
+
+@keyframes dropFromTop {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+  60% {
+      transform: translateY(10px);
+      opacity: 1;
+  }
+  80% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Alternative version with slide */
+
+.head-title {
+  /* Modern font stack */
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: #0b0b01ca;
+  text-align: center;
+  
+  /* Minimal top spacing */
+  margin: 5px 0 20px 0;  /* reduced top margin to 5px */
+  padding: 0;
+  line-height: 1.2;
+  
+  /* Animation */
+  position: relative;
+  display: block;
+  animation: smoothDrop 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Optional: Add text shadow for better contrast */
+.head-title.enhanced {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.02em;  /* Slightly tighter letter spacing */
+}
+
+@keyframes smoothDrop {
+  0% {
+      transform: translateY(-30px);  /* Reduced distance for subtler animation */
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Optional: For retina/high-DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .head-title {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 /* Apply a gradient background similar to Solflare */
+/* General body styling */
 body {
-  background: linear-gradient(135deg, #0f0f1d, #0a0b34 60%, #0e113a 100%);
-  background-image: url('https://img.freepik.com/free-vector/gradient-connection-background_23-2150511957.jpg');
-  background-size: cover;
-  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  animation: backgroundAnimation 10s ease infinite;
 }
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  animation: backgroundAnimation 30s ease infinite; /* Extended time for slower transition */
+}
+
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow for fireflies */
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  animation: backgroundAnimation 30s ease infinite;
+}
+
+/* Animation keyframes for smooth background color transition */
+@keyframes backgroundAnimation {
+  0% {
+      background-color: #f6d365; /* Light Yellow */
+  }
+  25% {
+      background-color: #fda085; /* Soft Peach */
+  }
+  50% {
+      background-color: #a1c4fd; /* Light Sky Blue */
+  }
+  75% {
+      background-color: #c2e9fb; /* Light Cyan */
+  }
+  100% {
+      background-color: #f6d365; /* Back to Light Yellow */
+  }
+}
+
+/* Fireflies effect */
+@keyframes firefly {
+  0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0.5;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(calc(-100vh - 50px)) translateX(calc(100vw + 50px));
+      opacity: 0;
+  }
+}
+
+/* Firefly styling */
+.firefly {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.5);
+  animation: firefly 10s linear infinite;
+  opacity: 0.5;
+}
+
+/* Randomize the fireflies position and timing */
+.firefly:nth-child(1) {
+  left: 20%;
+  top: 80%;
+  animation-delay: 1s;
+}
+
+.firefly:nth-child(2) {
+  left: 40%;
+  top: 60%;
+  animation-delay: 3s;
+}
+
+.firefly:nth-child(3) {
+  left: 60%;
+  top: 90%;
+  animation-delay: 5s;
+}
+
+.firefly:nth-child(4) {
+  left: 80%;
+  top: 30%;
+  animation-delay: 7s;
+}
+
+.firefly:nth-child(5) {
+  left: 10%;
+  top: 50%;
+  animation-delay: 9s;
+}
+
+.firefly:nth-child(6) {
+  left: 30%;
+  top: 40%;
+  animation-delay: 11s;
+}
+
+.firefly:nth-child(7) {
+  left: 50%;
+  top: 20%;
+  animation-delay: 13s;
+}
+
+/* Optional styling for app container */
+.app-container {
+  text-align: center;
+  color: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6); /* Slight transparency for the container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  animation: moveLeftRightBounce 3s ease-in-out infinite;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes moveLeftRightBounce {
+  0%, 100% {
+      transform: translateX(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+      transform: translateX(100px);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+/* App.css */
+
+h2 {
+  text-align: left;                   
+  font-family: 'Georgia', serif;     
+  font-size: 28px;                   
+  font-weight: 700;                  /* Bold font */
+  line-height: 1.4;                  /* Set line height for readability */
+  letter-spacing: 0.5px;             /* Add some letter spacing */
+  color: #333;                       /* Set text color */
+  padding: 2px;                     /* Add some padding around the text */
+  overflow: hidden;                  /* Ensure overflow is hidden for animation */
+  /* white-space: nowrap;               Prevent text wrapping */
+  margin: 2;                         /* Remove default margin */
+}
+
 
