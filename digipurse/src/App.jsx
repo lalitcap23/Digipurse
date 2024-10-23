@@ -41,14 +41,14 @@ function App() {
                         <h1 className='head-title'>You are back for those faucets.</h1>
                         <h2>**Digipurse** is a web-based Solana wallet designed for seamless cryptocurrency management. Users can easily access free devnet SOL, enabling them to explore and test the Solana blockchain without any costs. With Digipurse, you can effortlessly transfer SOL to any address, making it an ideal tool for developers and enthusiasts looking to interact with the Solana ecosystem. Enjoy a user-friendly interface and secure transactions while diving into the world of decentralized finance!</h2>
                         <WalletMultiButton />
-                        <WalletDisconnectButton />
+                        <WalletDisconnectButton  />
                     </div>
                     
                     {/* Airdrop Component */}
                     <Airdrop />
                     <br/>
-                    <Button />
                     <Tran />
+                    <Button />
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>

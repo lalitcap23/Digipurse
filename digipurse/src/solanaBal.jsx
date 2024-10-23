@@ -8,11 +8,9 @@ const SolanaBalance = ({ publicKey }) => {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        // Connect to the Solana mainnet or devnet
         const connection = new Connection('https://api.mainnet-beta.solana.com');
 
-        // Create a PublicKey object from the provided string
-        const pubKey = new PublicKey(publicKey);
+            const pubKey = new PublicKey(publicKey);
 
         // Fetch the balance
         const balanceInLamports = await connection.getBalance(pubKey);

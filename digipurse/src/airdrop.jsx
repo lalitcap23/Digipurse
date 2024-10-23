@@ -13,12 +13,12 @@ const Airdrop = () => {
             try {
                 const signature = await connection.requestAirdrop(publicKey, 1000);
                 await connection.confirmTransaction(signature, 'confirmed');
-                alert('bitch run away! u got that shit ');
+                alert('Devnet has been successfully sent to the connect wallet  ');
             } catch (err) {
                 console.error(err);
-                alert('bitch try later !');
+                alert(' server is not free try again');
             }
-        } else {
+        } else {    
             alert('Connect your wallet first!');
         }
     }, [publicKey, connection]);
@@ -26,7 +26,7 @@ const Airdrop = () => {
     return (
         <div>
             <button onClick={handleAirdrop} disabled={!publicKey}>
-                Airdrop 0.01 SOL
+                <button>Airdrop 0.01 SOL</button>
             </button>
         </div>
     );
