@@ -12,10 +12,8 @@ const SolanaBalance = ({ publicKey }) => {
 
             const pubKey = new PublicKey(publicKey);
 
-        // Fetch the balance
         const balanceInLamports = await connection.getBalance(pubKey);
 
-        // Convert lamports to SOL (1 SOL = 1e9 lamports)
         const balanceInSOL = balanceInLamports / 1e9;
 
         setBalance(balanceInSOL);
